@@ -1,3 +1,6 @@
+# 基于原single-spa-angular插件修改
+用于实现切换application时保存module实例，以维持原有页面状态。实现方案不优雅，有bug，仅满足个人使用
+
 # single-spa-angular
 Helpers for building [single-spa](https://github.com/CanopyTax/single-spa) applications which use Angular.
 
