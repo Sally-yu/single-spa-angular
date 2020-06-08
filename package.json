@@ -1,0 +1,98 @@
+{
+  "_args": [
+    [
+      "single-spa-angular@3.0.1",
+      "/Users/mac/coexisting-angular-microfrontends/app1"
+    ]
+  ],
+  "_from": "single-spa-angular@3.0.1",
+  "_id": "single-spa-angular@3.0.1",
+  "_inBundle": false,
+  "_integrity": "sha512-mMvBpGqEESTTNJ165bHoAL1ds1rF1Jm2cjC0oqQ0FVOi82CVG1ckkl8UnAccmGil91x0sBDpPspYe50YnSfhEw==",
+  "_location": "/single-spa-angular",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "single-spa-angular@3.0.1",
+    "name": "single-spa-angular",
+    "escapedName": "single-spa-angular",
+    "rawSpec": "3.0.1",
+    "saveSpec": null,
+    "fetchSpec": "3.0.1"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/single-spa-angular/-/single-spa-angular-3.0.1.tgz",
+  "_spec": "3.0.1",
+  "_where": "/Users/mac/coexisting-angular-microfrontends/app1",
+  "author": {
+    "name": "Joel Denning"
+  },
+  "bugs": {
+    "url": "https://github.com/CanopyTax/single-spa-angular/issues"
+  },
+  "builders": "builders.json",
+  "dependencies": {
+    "semver": "^6.2.0",
+    "single-spa": ">= 4.0.0"
+  },
+  "description": "Helpers for building single-spa applications which use Angular 2",
+  "devDependencies": {
+    "@angular-devkit/architect": "^0.13.6",
+    "@angular-devkit/build-angular": "^0.13.6",
+    "@angular-devkit/core": "^7.3.6",
+    "@angular-devkit/schematics": "^7.3.6",
+    "@angular/compiler": "^7.2.9",
+    "@angular/compiler-cli": "^7.2.9",
+    "@angular/core": "^7.2.9",
+    "@schematics/angular": "^7.3.6",
+    "@types/jest": "^24.0.11",
+    "@types/node": "^11.11.3",
+    "@types/webpack-merge": "^4.1.3",
+    "@typescript-eslint/eslint-plugin": "^1.4.2",
+    "@typescript-eslint/parser": "^1.4.2",
+    "cpx": "^1.5.0",
+    "eslint": "^5.15.2",
+    "jest": "^24.5.0",
+    "rimraf": "^2.6.2",
+    "single-spa": "^4.3.5",
+    "ts-jest": "^24.0.0",
+    "typescript": "3.2.4",
+    "webpack": "^4.29.6"
+  },
+  "homepage": "https://github.com/CanopyTax/single-spa-angular#readme",
+  "keywords": [
+    "single-spa",
+    "angular"
+  ],
+  "license": "Apache-2.0",
+  "main": "lib/browser-lib/single-spa-angular.js",
+  "name": "single-spa-angular",
+  "peerDependencies": {
+    "@angular-devkit/architect": ">= 0.10.0",
+    "@angular-devkit/build-angular": ">= 0.10.0",
+    "@angular-devkit/core": ">= 0.10.0",
+    "@angular/compiler": ">=2",
+    "@angular/compiler-cli": ">=2",
+    "@angular/core": ">=2",
+    "rxjs": ">= 6.0.0",
+    "webpack": ">=4.6.0",
+    "webpack-merge": "^4.2.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CanopyTax/single-spa-angular.git"
+  },
+  "schematics": "./schematics.json",
+  "scripts": {
+    ":copy-schematic-files": "cpx \"src/**/_files/**/**\" lib",
+    "build": "npm run clean && tsc -p tsconfig.node.json && tsc -p tsconfig.browser.json && npm run :copy-schematic-files",
+    "clean": "rimraf lib",
+    "lint": "eslint ./src/**/*.ts",
+    "prepublishOnly": "npm run build && npm run test",
+    "test": "jest"
+  },
+  "version": "3.0.1"
+}
